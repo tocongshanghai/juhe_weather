@@ -2,8 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
-    
+    android:background="@color/blue"
+     >
+ <!--  
 <com.tocong.juhe_weather_application.swiperefresh.PullToRefreshScrollView 
      xmlns:ptr="http://schemas.android.com/apk/res-auto"
         android:id="@+id/pull_refresh_scrollview"
@@ -13,10 +14,145 @@
         ptr:ptrAnimationStyle="flip"
         ptr:ptrMode="pullFromStart"
     >
-    <TextView android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/filler_text"
-        />
     
-</com.tocong.juhe_weather_application.swiperefresh.PullToRefreshScrollView>
+    </com.tocong.juhe_weather_application.swiperefresh.PullToRefreshScrollView>
+     -->  
+     <LinearLayout android:layout_width="match_parent" 
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:padding="16dp"
+         >
+         <RelativeLayout 
+             android:id="@+id/rl_city"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"  
+           >
+             <TextView 
+                 android:id="@+id/tv_city"
+                  android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/text_color"
+                    android:text="北京"
+                 />
+             <ImageView 
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:padding="4dp"
+                 android:src="@drawable/arrow"
+                 android:layout_toRightOf="@id/tv_city"
+                  android:layout_alignBottom="@id/tv_city"
+                   android:layout_alignTop="@id/tv_city"
+                 />
+             
+         </RelativeLayout>
+         
+         <TextView 
+              android:id="@+id/tv_release"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:text="@string/default_text"
+                android:textColor="@color/text_color"
+                android:textSize="12sp"
+             
+             />
+          <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/light_grey" />
+          
+          <LinearLayout 
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="24dp"
+              >
+              
+              <ImageView 
+                   android:id="@+id/iv_now_weather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/d00"
+                  
+                  />
+              
+               <TextView
+                    android:id="@+id/tv_now_weather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:text="@string/default_text"
+                    android:textColor="@color/text_color" />
+          </LinearLayout>
+          
+            <TextView
+                android:id="@+id/tv_today_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/default_text"
+                android:textColor="@color/text_color"
+                android:textSize="12sp" />
+          
+          <LinearLayout 
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="16dp"
+              android:layout_marginTop="16dp"
+              >
+              
+              <TextView
+                    android:id="@+id/tv_now_temp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/default_text"
+                    android:textColor="@color/text_color"
+                    android:textSize="48sp" />
+              
+               <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/wireframe_light"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/pm"
+                        android:textColor="@color/text_color" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp" >
+
+                        <TextView
+                            android:id="@+id/tv_aqi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/default_text"
+                            android:textColor="@color/text_color" />
+
+                        <TextView
+                            android:id="@+id/tv_quality"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="5"
+                            android:gravity="right"
+                            android:text="@string/default_text"
+                            android:textColor="@color/text_color" />
+                    </LinearLayout>
+                </LinearLayout>      
+          </LinearLayout>
+          
+          
+          
+          
+         
+     </LinearLayout>
+     
 </LinearLayout>

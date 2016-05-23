@@ -19,10 +19,10 @@ public class WeatherActivity extends Activity{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_weather);
-		init();
+	//	init();
 	}
 	
-	 private void init() {
+	/* private void init() {
 	        mPullToRefreshScrollView = (PullToRefreshScrollView) findViewById(R.id.pull_refresh_scrollview);
 	        mPullToRefreshScrollView.setOnRefreshListener(new OnRefreshListener<ScrollView>() {
 
@@ -38,5 +38,6 @@ public class WeatherActivity extends Activity{
 	        mScrollView = mPullToRefreshScrollView.getRefreshableView();
 	        
 	 }
+	 */
 
 }
